@@ -40,7 +40,7 @@ def AGGDfit(structdis):
     gam = 0.2
 
     # vectorized function call for best fitting parameters
-    vectfunc = np.vectorize(func, otypes=[np.float], cache=False)
+    vectfunc = np.vectorize(func, otypes=[np.float32], cache=False)
 
     # calculate best fit params
     gamma_best = vectfunc(gam, prevgamma, prevdiff, sampling, rhatnorm)

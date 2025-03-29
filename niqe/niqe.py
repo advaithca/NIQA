@@ -87,7 +87,7 @@ def paired_product(new_im):
 
 def gen_gauss_window(lw, sigma):
     sd = np.float32(sigma)
-    lw = int(lw)
+    lw = np.int32(lw)
     weights = [0.0] * (2 * lw + 1)
     weights[lw] = 1.0
     sum = 1.0

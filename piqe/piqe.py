@@ -83,7 +83,7 @@ def noiseCriterion(Block, blockSize, blockVar):
 
 def centerSurDev(Block, blockSize):
     # block center
-    center1 = int((blockSize+1)/2)-1
+    center1 = np.int32((blockSize+1)/2)-1
     center2 = center1+1
     center = np.vstack((Block[:, center1], Block[:, center2]))
     # block surround
@@ -193,7 +193,7 @@ def piqe(im):
                 total_nc = [total_nc, WNC]
 
     BlockScores = sorted(BlockScores)
-    lowSum = sum(BlockScores[:int(0.1*len(BlockScores))])
+    lowSum = sum(BlockScores[:np.int32(0.1*len(BlockScores))])
     Sum = sum(BlockScores)
     Scores = [(s*10*lowSum)/Sum for s in BlockScores]
     C = 1
