@@ -1,4 +1,4 @@
-python main.py --folder ./images/demo1 \
+python main.py --folder ./images/hack \
 --metric BRISQUE PIQE NIQE RANKIQA METAIQA \
 --ext jpg png \
 --record ./images/hack.csv \
